@@ -34,24 +34,26 @@
 Файлы, входящие в дистрибутив
 -----------------------------
 
-plashki.exe - исполняемый файл программы.
-plashki.ini - конфигурация программы и параметры последнего эксперимента.
-sqlite3.dll - библиотека, необходимая для работы с СУБД SQLite 3.
-README.txt  - данный файл.
-LICENSE     - информация о лицензии.
-plashki.db3 - информацией о проведенных экспериментах (SQLite 3). Будет создан при первом запуске plashki.exe
-exp2csv.bat - выгрузить информацию из plashki.db3 в файлы seans.csv, event.csv
-sqlite3.exe - консольная утилита работы с СУБД SQLite 3 - необходима для работы exp2csv.bat
+- plashki.exe - исполняемый файл программы.
+- plashki.ini - конфигурация программы и параметры последнего эксперимента.
+- sqlite3.dll - библиотека, необходимая для работы с СУБД SQLite 3.
+- README.txt  - данный файл.
+- LICENSE     - информация о лицензии.
+- plashki.db3 - информацией о проведенных экспериментах (SQLite 3). Будет создан при первом запуске plashki.exe
+- exp2csv.bat - выгрузить информацию из plashki.db3 в файлы seans.csv, event.csv
+- sqlite3.exe - консольная утилита работы с СУБД SQLite 3 - необходима для работы exp2csv.bat
 
 Коды цветов в Delphi
 --------------------
 
 Эти коды цветов используются в plashki.ini
+
 Для справки [https://kslift.ru/nastroyka-tsveta-koda-delphi]
-clSilver 12632256
-clGray 8421504
-clWhite 16777215
-clGreen 32768
+
+- clSilver 12632256
+- clGray 8421504
+- clWhite 16777215
+- clGreen 32768
 
 Лицензия
 --------
@@ -60,7 +62,7 @@ clGreen 32768
 Lazarus 2.2.0 [https://www.lazarus-ide.org/] и распространяется на условиях лицензии MIT,
 которая позволяет использовать программу в любых целях и модифицировать её исходный код.
 
---
+--  
 Дмитрий Булгаков <dbulgakov7@yandex.ru>, Ярослава Булгакова <bulgakova_ya_v@staff.sechenov.ru>,
 Ярослав Туровский <yaroslav_turovsk@mail.ru>
 
