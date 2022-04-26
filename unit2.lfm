@@ -1,0 +1,164 @@
+object Form2: TForm2
+  Left = 804
+  Height = 451
+  Top = 316
+  Width = 698
+  BorderStyle = bsDialog
+  Caption = 'Создать конфиг мигания плашек'
+  ClientHeight = 451
+  ClientWidth = 698
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object Button1: TButton
+    Left = 524
+    Height = 31
+    Hint = 'Отменить эксперимент'
+    Top = 86
+    Width = 146
+    Caption = 'Отмена'
+    OnClick = Button1Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 284
+    Top = 20
+    Width = 400
+    Caption = 'Входные параметры'
+    ClientHeight = 259
+    ClientWidth = 396
+    TabOrder = 1
+    object LabeledEdit2: TLabeledEdit
+      Left = 230
+      Height = 28
+      Hint = 'Сколько раз должна мигнуть каждая плашка'
+      Top = 30
+      Width = 148
+      EditLabel.Height = 20
+      EditLabel.Width = 148
+      EditLabel.Caption = 'Мигнет каждая, раз'
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Text = '0'
+      OnChange = LabeledEdit2Change
+    end
+    object LabeledEdit3: TLabeledEdit
+      Left = 16
+      Height = 28
+      Top = 130
+      Width = 272
+      EditLabel.Height = 20
+      EditLabel.Width = 272
+      EditLabel.Caption = 'Пауза между миганиями, с'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      Text = '0'
+      OnChange = LabeledEdit3Change
+    end
+    object LabeledEdit4: TLabeledEdit
+      Left = 16
+      Height = 28
+      Top = 194
+      Width = 272
+      EditLabel.Height = 20
+      EditLabel.Width = 272
+      EditLabel.Caption = 'Время подсветки активной плашки, c'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      Text = '0'
+      OnChange = LabeledEdit4Change
+    end
+    object RadioGroup68: TRadioGroup
+      Left = 16
+      Height = 74
+      Top = 10
+      Width = 190
+      AutoFill = True
+      Caption = 'Количество плашек, шт.'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 49
+      ClientWidth = 186
+      TabOrder = 3
+      object rb6: TRadioButton
+        Left = 6
+        Height = 25
+        Top = 0
+        Width = 174
+        Caption = '6 штук'
+        OnChange = rb6Change
+        TabOrder = 0
+      end
+      object rb8: TRadioButton
+        Left = 6
+        Height = 24
+        Top = 25
+        Width = 174
+        Caption = '8 штук'
+        Checked = True
+        OnChange = rb8Change
+        TabOrder = 1
+        TabStop = True
+      end
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 16
+    Height = 114
+    Top = 320
+    Width = 400
+    Caption = 'Результат расчета'
+    ClientHeight = 89
+    ClientWidth = 396
+    TabOrder = 2
+    object LabeledEdit5: TLabeledEdit
+      Left = 16
+      Height = 28
+      Top = 32
+      Width = 224
+      EditLabel.Height = 20
+      EditLabel.Width = 224
+      EditLabel.Caption = 'Длительность эксперимента, c'
+      Enabled = False
+      ReadOnly = True
+      TabOrder = 0
+      Text = '-'
+    end
+  end
+  object Button3: TButton
+    Left = 524
+    Height = 31
+    Hint = 'Начать эксперимент'
+    Top = 30
+    Width = 146
+    Caption = 'Старт!'
+    OnClick = Button3Click
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 430
+    Height = 28
+    Top = 160
+    Width = 240
+    EditLabel.Height = 20
+    EditLabel.Width = 240
+    EditLabel.Caption = 'Испытуемый (ФИО)'
+    TabOrder = 4
+    Text = '-'
+    OnChange = LabeledEdit1Change
+  end
+end

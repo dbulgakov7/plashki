@@ -1,0 +1,38 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 348
+  HorizontalOffset = 1099
+  VerticalOffset = 464
+  Width = 636
+  PPI = 120
+  object conn: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = trans
+    AlwaysUseBigint = False
+    Left = 60
+    Top = 40
+  end
+  object trans: TSQLTransaction
+    Active = False
+    Database = conn
+    Left = 110
+    Top = 60
+  end
+  object ds1: TDataSource
+    Left = 240
+    Top = 130
+  end
+  object sql_temp: TSQLQuery
+    FieldDefs = <>
+    Database = conn
+    Transaction = trans
+    Params = <>
+    Macros = <>
+    Left = 170
+    Top = 90
+  end
+end
