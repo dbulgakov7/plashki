@@ -26,6 +26,7 @@ plashki.exe
 backup/
 *.bak
 lib/
+releases/*
 
 # Application bundle for Mac OS
 *.app/
