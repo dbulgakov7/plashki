@@ -1,21 +1,20 @@
 object Form1: TForm1
-  Left = 323
-  Height = 592
-  Top = 311
-  Width = 2100
-  Caption = 'Плашки 1.0'
-  ClientHeight = 592
-  ClientWidth = 2100
+  Left = 26
+  Height = 474
+  Top = 148
+  Width = 1680
+  Caption = 'Плашки 1.0.1'
+  ClientHeight = 474
+  ClientWidth = 1680
   Color = clSilver
-  DesignTimePPI = 120
   OnCreate = FormCreate
   SessionProperties = 'Width;Height;Color;Panel1.Color;Panel2.Color;Panel3.Color;Panel4.Color;Panel5.Color;Panel6.Color;Panel7.Color;Panel8.Color'
   LCLVersion = '2.2.0.4'
   object Panel1: TPanel
-    Left = 20
-    Height = 174
-    Top = 20
-    Width = 494
+    Left = 16
+    Height = 139
+    Top = 16
+    Width = 395
     Caption = '1'
     Color = clGray
     ParentBidiMode = False
@@ -24,81 +23,81 @@ object Form1: TForm1
     TabOrder = 0
   end
   object Panel2: TPanel
-    Left = 540
-    Height = 174
-    Top = 20
-    Width = 494
+    Left = 432
+    Height = 139
+    Top = 16
+    Width = 395
     Caption = '2'
     Color = clGray
     ParentColor = False
     TabOrder = 1
   end
   object Panel3: TPanel
-    Left = 1060
-    Height = 174
-    Top = 20
-    Width = 494
+    Left = 848
+    Height = 139
+    Top = 16
+    Width = 395
     Caption = '3'
     Color = clGray
     ParentColor = False
     TabOrder = 2
   end
   object Panel4: TPanel
-    Left = 1580
-    Height = 174
-    Top = 20
-    Width = 494
+    Left = 1264
+    Height = 139
+    Top = 16
+    Width = 395
     Caption = '4'
     Color = clGray
     ParentColor = False
     TabOrder = 3
   end
   object Panel5: TPanel
-    Left = 16
-    Height = 174
-    Top = 220
-    Width = 494
+    Left = 13
+    Height = 139
+    Top = 176
+    Width = 395
     Caption = '5'
     Color = clGray
     ParentColor = False
     TabOrder = 4
   end
   object Panel6: TPanel
-    Left = 540
-    Height = 174
-    Top = 220
-    Width = 494
+    Left = 432
+    Height = 139
+    Top = 176
+    Width = 395
     Caption = '6'
     Color = clGray
     ParentColor = False
     TabOrder = 5
   end
   object Panel7: TPanel
-    Left = 1060
-    Height = 174
-    Top = 220
-    Width = 494
+    Left = 848
+    Height = 139
+    Top = 176
+    Width = 395
     Caption = '7'
     Color = clGray
     ParentColor = False
     TabOrder = 6
   end
   object Panel8: TPanel
-    Left = 1580
-    Height = 174
-    Top = 220
-    Width = 494
+    Left = 1264
+    Height = 139
+    Top = 176
+    Width = 395
     Caption = '8'
     Color = clGray
     ParentColor = False
     TabOrder = 7
   end
   object Button1: TButton
-    Left = 910
-    Height = 41
+    Left = 723
+    Height = 33
     Hint = 'Задать параметры и запустить мигание плашек'
-    Top = 500
-    Width = 130
+    Top = 400
+    Width = 104
     Cancel = True
     Caption = 'Начать'
     OnClick = Button1Click
@@ -107,10 +106,10 @@ object Form1: TForm1
     TabOrder = 8
   end
   object Button2: TButton
-    Left = 1066
-    Height = 41
-    Top = 500
-    Width = 120
+    Left = 848
+    Height = 33
+    Top = 400
+    Width = 96
     Caption = 'Стоп'
     Enabled = False
     OnClick = Button2Click
@@ -119,19 +118,19 @@ object Form1: TForm1
   object TimerOn: TTimer
     Interval = 0
     OnTimer = TimerOnTimer
-    Left = 311
-    Top = 485
+    Left = 249
+    Top = 388
   end
   object TimerOff: TTimer
     Interval = 0
     OnTimer = TimerOffTimer
-    Left = 391
-    Top = 504
+    Left = 313
+    Top = 403
   end
   object TimerOnFirstTime: TTimer
     Interval = 0
     OnTimer = TimerOnFirstTimeTimer
-    Left = 260
-    Top = 504
+    Left = 208
+    Top = 403
   end
 end
