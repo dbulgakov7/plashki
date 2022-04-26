@@ -1,7 +1,6 @@
 Лицензия MIT (неофициальный перевод на русский язык)
 
-Copyright (c) 2022 Дмитрий Булгаков <dbulgakov7@yandex.ru>, 
-Ярослава Булгакова <bulgakova_ya_v@staff.sechenov.ru>, Ярослав Туровский <yaroslav_turovsk@mail.ru>
+Copyright (c) 2022 Дмитрий Булгаков <dbulgakov7@yandex.ru>, Ярослава Булгакова <bulgakova_ya_v@staff.sechenov.ru>, Ярослав Туровский <yaroslav_turovsk@mail.ru>
 
 Данная лицензия разрешает лицам, получившим копию данного программного обеспечения 
 и сопутствующей документации (в дальнейшем именуемыми «Программное обеспечение»), 
