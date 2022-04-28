@@ -21,8 +21,6 @@ const
    Plashki8Top: array[1..8] of longint = (16, 16, 16, 16, 176, 176, 176, 176);
    Plashki6Left: array[1..6] of longint = (16, 432, 848, 16, 432, 848);
    Plashki6Top: array[1..6] of longint = (16, 16, 16, 176, 176, 176);
-   ButtonsLeft6: array[1..2] of longint = (512, 637);
-   ButtonsLeft8: array[1..2] of longint = (723, 848);
 
 type
    TIntegerArray = Array of Integer;
@@ -151,14 +149,14 @@ begin
   if is_begin_exp then begin // После выхода из Form2 (is_begin_exp = True)
     Show68Plashek(Sender, ep.Plashki_Count);
     set_target_panel(ep.Target_Plashka_Num);
-    ShowMessage('Эксперимент начинается. ');
+    ShowMessage('Эксперимент начинается.');
+    DataModule1.seans_insert(Now);
     seq_str.DelimitedText := Flash_Queue; // Сформируем массив очереди из цифр на основе строки с разделителями
     now_flash_index := 0;
     // Начинаем с того, что все плашки погашены
     GameOver := False;
     Button1.Enabled := False;
     Button2.Enabled := True;
-    DataModule1.seans_insert();
     TimerOn.Interval := 0; // Выключим таймер горения
     TimerOnFirstTime.Interval := 0; // Выключим таймер горения первого раза выключен
     TimerOff.Interval := Round((ep.Flash_Light_Delay + ep.Flash_Pause_Delay) * 1000); // Взведем таймер паузы
@@ -174,8 +172,8 @@ begin
   TimerOn.Interval := 0;
   now_flash_index := 0;
   GameOver := true; // Игра окончена
-  DataModule1.seans_update_end(0);
   ShowMessage('Эксперимент остановлен.');
+  DataModule1.seans_update_end(0, Now);
   Button1.Enabled := True;
   Button2.Enabled := False;
   set_visual_elements_color();
@@ -211,8 +209,8 @@ begin
     TimerOff.Interval := 0;
     TimerOn.Interval := 0;
     TimerOnFirstTime.Interval := 0; // Выключим таймер горения первого раза
-    DataModule1.seans_update_end(1);
     ShowMessage('Эксперимент закончен.');
+    DataModule1.seans_update_end(1, Now);
     Button1.Enabled := True;
     Button2.Enabled := False;
     set_visual_elements_color();
@@ -261,10 +259,6 @@ begin
       Panel.Top := Plashki8Top[i];
       Panel.Visible := True;
     end;
-    Form1.Height:= 474;
-    Form1.Width := 1680;
-    Button1.Left := ButtonsLeft8[1];
-    Button2.Left := ButtonsLeft8[2];
   end
   else if PlashkiCount = 6 then begin
     for i := 1 to 6 do begin
@@ -277,10 +271,6 @@ begin
     end;
     Panel7.Visible := False;
     Panel8.Visible := False;
-    Form1.Height:= 474;
-    Form1.Width := 1260;
-    Button1.Left := ButtonsLeft6[1];
-    Button2.Left := ButtonsLeft6[2];
   end;
 end;
 

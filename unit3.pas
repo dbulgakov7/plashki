@@ -44,9 +44,9 @@ type
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure ConnectToSQLite();
-    function seans_insert(): LongInt;
+    function seans_insert(ts: TDateTime): LongInt;
     function event_insert(seans_id: LongInt; flash_num: LongInt; plashka_num: LongInt; is_plashka_target: LongInt; ts: TDateTime): LongInt;
-    procedure seans_update_end(is_seans_completely: LongInt);
+    procedure seans_update_end(is_seans_completely: LongInt; ts: TDateTime);
   private
 
   public
@@ -99,11 +99,11 @@ begin
   trans.Commit;
 end;
 
-function TDataModule1.seans_insert(): LongInt;
+function TDataModule1.seans_insert(ts: TDateTime): LongInt;
 begin
   sql_temp.SQL.Text := 'INSERT INTO seans (begin_seans, fio, plashki_count, target_plashka_num, flash_pause_delay, flash_light_delay, every_plashka_flash_count, flash_queue_json, colors_json)'
       +'values (:begin_seans, :fio, :plashki_count, :target_plashka_num, :flash_pause_delay, :flash_light_delay, :every_plashka_flash_count, :flash_queue_json, :colors_json)';
-  sql_temp.Params.ParamByName('begin_seans').AsString := FormatDateTime('YYYY-MM-DD hh:nn:ss.zzz', Now());
+  sql_temp.Params.ParamByName('begin_seans').AsString := FormatDateTime('YYYY-MM-DD hh:nn:ss.zzz', ts);
   sql_temp.Params.ParamByName('fio').AsString := ep.Subject_FIO;
   sql_temp.Params.ParamByName('plashki_count').AsInteger := ep.Plashki_Count;
   sql_temp.Params.ParamByName('target_plashka_num').AsInteger := ep.Target_Plashka_Num;
@@ -137,12 +137,12 @@ begin
   Result := conn.GetInsertID;
 end;
 
-procedure TDataModule1.seans_update_end(is_seans_completely: LongInt);
+procedure TDataModule1.seans_update_end(is_seans_completely: LongInt; ts: TDateTime);
 begin
   sql_temp.SQL.Text := 'UPDATE seans '
       +'set end_seans = :end_seans, '
       +'is_seans_completely = :is_seans_completely WHERE id = :id';
-  sql_temp.Params.ParamByName('end_seans').AsString := FormatDateTime('YYYY-MM-DD hh:nn:ss.zzz', Now());
+  sql_temp.Params.ParamByName('end_seans').AsString := FormatDateTime('YYYY-MM-DD hh:nn:ss.zzz', ts);
   sql_temp.Params.ParamByName('is_seans_completely').AsInteger := is_seans_completely;
   sql_temp.Params.ParamByName('id').AsInteger := current_seans_id;
   sql_temp.ExecSQL;

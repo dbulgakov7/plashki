@@ -1,12 +1,13 @@
 object Form1: TForm1
-  Left = 26
-  Height = 474
-  Top = 148
+  Left = 48
+  Height = 399
+  Top = 180
   Width = 1680
-  Caption = 'Плашки 1.0.1'
-  ClientHeight = 474
+  Caption = 'Плашки 1.0.2'
+  ClientHeight = 399
   ClientWidth = 1680
   Color = clSilver
+  DesignTimePPI = 120
   OnCreate = FormCreate
   SessionProperties = 'Width;Height;Color;Panel1.Color;Panel2.Color;Panel3.Color;Panel4.Color;Panel5.Color;Panel6.Color;Panel7.Color;Panel8.Color'
   LCLVersion = '2.2.0.4'
@@ -53,7 +54,7 @@ object Form1: TForm1
     TabOrder = 3
   end
   object Panel5: TPanel
-    Left = 13
+    Left = 16
     Height = 139
     Top = 176
     Width = 395
@@ -94,9 +95,9 @@ object Form1: TForm1
   end
   object Button1: TButton
     Left = 723
-    Height = 33
+    Height = 41
     Hint = 'Задать параметры и запустить мигание плашек'
-    Top = 400
+    Top = 336
     Width = 104
     Cancel = True
     Caption = 'Начать'
@@ -107,9 +108,9 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 848
-    Height = 33
-    Top = 400
-    Width = 96
+    Height = 41
+    Top = 336
+    Width = 104
     Caption = 'Стоп'
     Enabled = False
     OnClick = Button2Click
@@ -118,19 +119,19 @@ object Form1: TForm1
   object TimerOn: TTimer
     Interval = 0
     OnTimer = TimerOnTimer
-    Left = 249
-    Top = 388
+    Left = 536
+    Top = 304
   end
   object TimerOff: TTimer
     Interval = 0
     OnTimer = TimerOffTimer
-    Left = 313
-    Top = 403
+    Left = 600
+    Top = 323
   end
   object TimerOnFirstTime: TTimer
     Interval = 0
     OnTimer = TimerOnFirstTimeTimer
-    Left = 208
-    Top = 403
+    Left = 464
+    Top = 323
   end
 end
